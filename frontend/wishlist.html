@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist - Shopnetic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Your Wishlist</h1>
+  <div id="wishlist-container" class="product-container"></div>
+
+  <script>
+    const wishlistContainer = document.getElementById('wishlist-container');
+    const wishlistData = JSON.parse(localStorage.getItem('wishlistData')) || [];
+
+    if (wishlistData.length === 0) {
+      wishlistContainer.innerHTML = "<p>Your wishlist is empty.</p>";
+    } else {
+      wishlistData.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-items';
+        div.innerHTML = `
+          <img src="${item.img}" alt="${item.name}" width="100">
+          <p>${item.name}</p>
+          <button onclick="removeWishlistItem(${index})">Remove</button>
+        `;
+        wishlistContainer.appendChild(div);
+      });
+    }
+
+    function removeWishlistItem(index) {
+      const updatedWishlist = wishlistData.filter((_, i) => i !== index);
+      localStorage.setItem('wishlistData', JSON.stringify(updatedWishlist));
+      location.reload(); // Refresh page
+    }
+  </script>
+</body>
+</html>

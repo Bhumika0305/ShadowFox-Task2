@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Shopnetic</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .cart-items {
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .order-summary {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .summary-table th, .summary-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    .summary-total {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    #billing-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #billing-form input, #billing-form textarea {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    .place-order-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .place-order-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <div id="cart-container" class="product-container"></div>
+
+  <!-- Order Summary Section -->
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <table class="summary-table" id="order-items">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will populate here -->
+      </tbody>
+    </table>
+
+    <div class="summary-total" id="total-cost"></div>
+
+    <h3>Billing Details</h3>
+    <form id="billing-form">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <textarea id="address" placeholder="Address" required></textarea>
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit" class="place-order-btn">Place Order</button>
+    </form>
+  </div>
+
+  <script>
+    const cartContainer = document.getElementById('cart-container');
+    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cartData.length === 0) {
+      cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      cartData.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-items';
+        div.innerHTML = `
+          <img src="${item.img}" alt="${item.name}" width="100">
+          <p>${item.name}</p>
+          <p>Qty: ${item.quantity}</p>
+          <p>Price: ₹${item.price}</p>
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        cartContainer.appendChild(div);
+      });
+    }
+
+    function removeItem(index) {
+      const updatedCart = cartData.filter((_, i) => i !== index);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      localStorage.setItem('cartCount', updatedCart.length);
+      location.reload(); // Refresh page
+    }
+
+    // Order summary table
+    const cartItems = cartData;
+    const tbody = document.querySelector("#order-items tbody");
+    const totalCost = document.getElementById("total-cost");
+
+    let grandTotal = 0;
+
+    cartItems.forEach(item => {
+      const subtotal = item.price * item.quantity;
+      grandTotal += subtotal;
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.quantity}</td>
+        <td>₹${item.price}</td>
+        <td>₹${subtotal}</td>
+      `;
+      tbody.appendChild(row);
+    });
+
+    totalCost.innerText = `Total: ₹${grandTotal}`;
+
+    // Place Order
+    document.getElementById("billing-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Order placed successfully!");
+      localStorage.removeItem("cart");
+      localStorage.removeItem("cartCount");
+      location.reload();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHOPNETIC</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/utils.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <header class="header-container">
+    <nav>
+      <div class="logo">
+        <img src="img/Logo.png" alt="" />
+      </div>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Search Here" />
+          <button class="btn">Search</button>
+        </div>
+        <div class="auth-buttons">
+          <a href="login.html" class="header-btn">Login</a>
+          <a href="signup.html" class="header-btn">Signup</a>
+        </div>
+        <div class="wishlist-header">
+          <a href="wishlist.html">
+            Wishlist❤️
+          </a>
+        </div>
+        <div class="cart-wrapper">
+          <a href="cart.html">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            🛒 <span id="cart-count">0</span>
+          </a>
+        </div>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="slider">
+        <img src="img/shopping.jpg" alt="" />
+      </div>
+
+      <div class="cart">
+        <div class="filter-buttons">
+          <button class="filter-btn" data-category="all">All</button>
+          <button class="filter-btn" data-category="toys">Toys</button>
+          <button class="filter-btn" data-category="food">Food</button>
+          <button class="filter-btn" data-category="electronics">Electronics</button>
+          <button class="filter-btn" data-category="furniture">Furniture</button>
+          <button class="filter-btn" data-category="fashion">Fashion</button>
+          <button class="filter-btn" data-category="beauty">Beauty</button>
+
+        </div>
+
+        <h2>Fashion , Food , Toys & more</h2>
+        <div class="cart-items-container">
+          <div class="cart-items" data-category="toys">
+            <img
+              src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRRwy3cOhQAcN6cM9CnmVJZWdad70W0BRDjHJ2lWFS_hhcoE_8ZaueeSnivNpcTHF6J_HD-tcL2nwL4IUWKEPGpCuUT8BPyAomG6LVEx6sqZWafRPJiOAc8"
+              alt="" />
+            <div class="lines">
+              <p>Soft Toys</p>
+              <p>Min 20% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Soft Toys">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="food">
+            <img src="img/chocolate.webp" alt="" />
+            <div class="lines">
+              <p>Chocolates</p>
+              <p>Min 10% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Chocolates">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="food">
+            <img src="img/dryfruits.jpg" alt="" />
+            <div class="lines">
+              <p>Dry Fruits</p>
+              <p>Min 10% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="dryfruits">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="electronics">
+            <img src="img/smartwatch.jpg" alt="" />
+            <div class="lines">
+              <p>Smart Watches</p>
+              <p>Min 40% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="smartwatch">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="food">
+            <img src="img/coffee.webp" alt="" />
+            <div class="lines">
+              <p>Coffee Powder</p>
+              <p>Upto 80% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="coffee">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="toys">
+            <img src="img/cars.webp" alt="" />
+            <div class="lines">
+              <p>Cars</p>
+              <p>Min 40% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Cars">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="fashion">
+            <img src="img/jewellery.webp" alt="" />
+            <div class="lines">
+              <p>Jewellery</p>
+              <p>Min 70% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Jewellery">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="cart-items" data-category="electronics">
+            <img src="img/headphone.webp" alt="" />
+            <div class="lines">
+              <p>Bluetooth Headphones</p>
+              <p>Min 15% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="headphone">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="toys">
+            <img src="img/lego.webp" alt="" />
+            <div class="lines">
+              <p>LEGO Building Set</p>
+              <p>Min 20% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="LEGO">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items">
+            <img src="img/waterbottle.webp" alt="" />
+            <div class="lines">
+              <p>Steel Water Bottle</p>
+              <p>Min 10% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Bottle">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="fashion">
+            <img src="img/tshirt.jpg" alt="" />
+            <div class="lines">
+              <p>Men's Cotton T-shirt</p>
+              <p>Min 30% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="T-shirt">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="fashion">
+            <img src="img/sunglasses.jpg" alt="" />
+            <div class="lines">
+              <p>Stylish Sunglasses</p>
+              <p>Min 25% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Sunglasses">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="beauty">
+            <img src="img/skincare.webp" alt="" />
+            <div class="lines">
+              <p>Skincare Kit</p>
+              <p>Min 18% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Skincare">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="beauty">
+            <img src="img/makeup.webp" alt="" />
+            <div class="lines">
+              <p>Makeup Kit</p>
+              <p>Min 20% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Makeup">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="cart-items" data-category="furniture">
+            <img src="img/sofa.jpg" alt="" />
+            <div class="lines">
+              <p>Sofa Set</p>
+              <p>Min 30% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Makeup">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="cart-items" data-category="electronics">
+            <img src="img/powerbank.jpg" alt="" />
+            <div class="lines">
+              <p>Power Bank</p>
+              <p>Min 15% Off</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Makeup">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <h2>Top Deals</h2>
+        <div class="cart-items-container" data-category="electronics">
+          <div class="cart-items">
+            <img src="img/ipad.webp" alt="" />
+            <div class="lines">
+              <p>Ipads</p>
+              <p>9,999/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Ipads">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="electronics">
+            <img src="img/camera.webp" alt="" />
+            <div class="lines">
+              <p>Instax Cameras</p>
+              <p>3,999/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Cameras">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="cart-items" data-category="electronics">
+            <img src="img/charger.webp" alt="" />
+            <div class="lines">
+              <p>Phone Chargers</p>
+              <p>99/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Phone Chargers">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="electronics">
+            <img src="img/watches.webp" alt="" />
+            <div class="lines">
+              <p>Watches</p>
+              <p>199/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Watches">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="fashion">
+            <img src="img/shoes.webp" alt="" />
+            <div class="lines">
+              <p>Men's Sports Shoes</p>
+              <p>199/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Shoes">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="electronics">
+            <img src="img/refrigerator.webp" alt="" />
+            <div class="lines">
+              <p>Refrigerators</p>
+              <p>10,990/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Refrigerators">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="cart-items" data-category="furniture">
+            <img src="img/bookshelf.webp" alt="" />
+            <div class="lines">
+              <p>Bookshelves</p>
+              <p>199/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Bookshelves">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+          <div class="cart-items" data-category="electronics">
+            <img src="img/AC.webp" alt="" />
+            <div class="lines">
+              <p>Air Conditioner</p>
+              <p>25,500/-</p>
+              <p>Grab Now!</p>
+              <span class="wishlist-icon" data-product="Bookshelves">♡</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h4>About Shopnetic</h4>
+        <p>Your one-stop shop for quality products at unbeatable prices. Shop smart, shop Shopnetic!</p>
+      </div>
+
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p>Email: support@shopnetic.com</p>
+        <p>Phone: +91-1234567890</p>
+      </div>
+
+      <div class="footer-section social">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Shopnetic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
