@@ -49,7 +49,6 @@ Shopnetic/
 
 ### 🛠️ Backend (Node.js + Express + MongoDB)
 - User Signup/Login with JWT auth
-- 
 ---
 
 ## ⚙️ How to Run Locally
