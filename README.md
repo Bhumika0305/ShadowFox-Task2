@@ -5,7 +5,7 @@ Shopnetic is a full-stack e-commerce platform built with HTML, CSS, JavaScript f
 ## 🌐 Frontend Deployment
 
 The frontend of this project is deployed and accessible at:
-
+ https://bhumika0305.github.io/Shopnetic-frontend/
 
 ---
 
