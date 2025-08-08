@@ -2,9 +2,10 @@
 
 Shopnetic is a full-stack e-commerce platform built with HTML, CSS, JavaScript for the frontend and Node.js, Express.js, and MongoDB for the backend. It features product browsing, filtering, sorting, cart/wishlist functionality, user authentication, order placement, and a simple billing system.
 
-## 🌐 Live Preview
+## 🌐 Frontend Deployment
 
-> Coming Soon (Deploy frontend on GitHub Pages and backend on Render/Vercel)
+The frontend of this project is deployed and accessible at:
+
 
 ---
 
@@ -15,19 +16,20 @@ Shopnetic/
 ├── backend/                # Node.js + Express backend
 │   ├── models/             # Mongoose models (User, Product, Order)
 │   ├── routes/             # API route handlers
-│   ├── controllers/        # Route logic
-│   ├── config/             # DB and environment setup
 │   ├── server.js           # Entry point
-├── public/                 # Frontend files
+├── frontend/                 # Frontend files
 │   ├── index.html
-│   ├── style.css
+│   ├── css/
 │   ├── cart.html
 │   ├── wishlist.html
 │   ├── signup.html
 │   ├── login.html
-│   └── js/                 # JS files for functionality
+│   ├── about.html
+│   ├── contact.html
+│   └── script.js                # JS file for functionality
 ├── .gitignore
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
@@ -47,11 +49,7 @@ Shopnetic/
 
 ### 🛠️ Backend (Node.js + Express + MongoDB)
 - User Signup/Login with JWT auth
-- Product API (CRUD)
-- Order placement (stores to MongoDB)
-- Protected routes (user-based orders)
-- CORS and secure headers
-
+- 
 ---
 
 ## ⚙️ How to Run Locally
@@ -66,8 +64,8 @@ Shopnetic/
 cd backend
 npm install
 # Create a `.env` file with the following:
-# MONGO_URI=your_mongodb_uri
-# JWT_SECRET=your_secret
+# MONGO_URI=mongodb://localhost:27017/shopnetic
+# JWT_SECRET=your_jwt_secret_here
 npm run dev
 ```
 
@@ -97,26 +95,7 @@ Or just open HTML files manually in browser.
 
 ---
 
-## 🧪 Example Test Data
-
-```json
-{
-  "name": "T-Shirt",
-  "price": 499,
-  "category": "Apparel",
-  "image": "https://link-to-image.jpg"
-}
-```
-
----
-
 ## 🙋‍♀️ Author
 
 - **Bhumika Hazra**
 - Intern Project for E-Commerce Development
-
----
-
-## 📬 Contact
-
-For queries or suggestions: [email@example.com](mailto:email@example.com)
